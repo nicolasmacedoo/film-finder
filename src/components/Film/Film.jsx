@@ -2,7 +2,12 @@ import React from "react";
 
 class Film extends React.Component {
     redner() {
-        return <p>Film</p>
+        return (
+            <div className="movieInfo">
+                <div className="moviePoster"></div>
+                <div className="movieText"></div>
+            </div>
+        )
     }
 }
 
