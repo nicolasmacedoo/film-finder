@@ -1,4 +1,5 @@
 import React from "react";
+import './Film.jsx';
 
 class Film extends React.Component {
     redner() {
