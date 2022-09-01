@@ -1,0 +1,28 @@
+.genre {
+    text-align: center;
+    margin: 0px auto;
+    display: block;
+    font-family: 'Fredoka One', sans-serif;
+}
+
+p {
+    display: block;
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 200px;
+    height: auto;
+}
+
+#playBtn {
+    margin-top: 20px;
+    font-size: 25px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    border-style: none;
+    background-color: #b97828;
+    color: #fdc238;
+    cursor: pointer;
+}
