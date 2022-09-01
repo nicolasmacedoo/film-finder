@@ -2,6 +2,14 @@ import React from "react";
 
 class SearchBar extends React.Component {
     render() {
-        return <p>SearchBar</p>
+        return (
+            <div className="genre">
+                <p>Choose a genre</p>
+                <select name="genres" id="genres"></select>
+                <button id="playBtn">Let's Play!</button>
+            </div>
+        )
     }
 }
+
+export default SearchBar;
