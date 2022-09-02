@@ -7,7 +7,9 @@ class SearchBar extends React.Component {
             <div className="genre">
                 <p>Choose a genre</p>
                 <select name="genres" id="genres"></select>
-                <button id="playBtn">Let's Play!</button>
+                <div>
+                    <button id="playBtn">Let's Play!</button>
+                </div>
             </div>
         )
     }
