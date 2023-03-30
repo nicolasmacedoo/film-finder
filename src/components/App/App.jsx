@@ -1,7 +1,6 @@
 import React from "react";
 import './App.css';
-import {getGenres} from '../../Util/Tmdb.js'
-
+import {getGenres, showRandomMovie} from '../../Util/Tmdb.js'
 import SearchBar from '../SearchBar/SearchBar';
 
 class App extends React.Component {
@@ -10,6 +9,7 @@ class App extends React.Component {
 
     this.state = {
       genres: [],
+      movie: ''
     };
 
     this.populateGenreDropdown = this.populateGenreDropdown.bind(this);
@@ -19,6 +19,15 @@ class App extends React.Component {
     getGenres().then(genres => {
       this.setState({
         genres,
+      });
+    });
+  }
+
+  searchRandomMovie(genre) {
+    showRandomMovie(genre).then(movie => {
+      console.log(movie)
+      this.setState({
+        movie
       });
     });
   }
