@@ -2,6 +2,7 @@ import React from "react";
 import './App.css';
 import {getGenres, showRandomMovie} from '../../Util/Tmdb.js'
 import SearchBar from '../SearchBar/SearchBar';
+import Movie from "../Movie/Movie";
 
 class App extends React.Component {
   constructor(props) {
@@ -37,7 +38,8 @@ class App extends React.Component {
     return (
       <div>
         <h1 className="appTitle">🍿Film Finder🍿</h1>
-        <SearchBar genres={this.state.genres} />
+        <SearchBar genres={this.state.genres} searchRandomMovie={this.searchRandomMovie} />
+        {this.state.movie && <Movie movie={this.state.movie} />}
       </div>
     )
   }
