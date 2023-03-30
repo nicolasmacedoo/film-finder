@@ -1,0 +1,28 @@
+.movieInfo {
+    width: 65%;
+    margin: 32px auto;
+}
+
+.movieInfo:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.moviePoster, .movieText {
+    width: 50%;
+    float: left;
+}
+
+img.moviePoster {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.movieText {
+    font-family: 'Questrial';
+    color: #fefbea;
+    line-height: 1.25;
+}
