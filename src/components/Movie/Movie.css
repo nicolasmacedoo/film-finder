@@ -1,21 +1,17 @@
 .movieInfo {
-    width: 65%;
+    max-width: 60%;
     margin: 32px auto;
-}
 
-.movieInfo:after {
-    content: "";
-    display: table;
-    clear: both;
+    display: flex;
 }
 
 .moviePoster, .movieText {
     width: 50%;
-    float: left;
 }
 
-img.moviePoster {
-    width: 100%;
+img#moviePoster {
+    width: 60%;
+    height: 60%;
     height: auto;
     display: block;
     margin: auto;
@@ -25,4 +21,8 @@ img.moviePoster {
     font-family: 'Questrial';
     color: #fefbea;
     line-height: 1.25;
+}
+
+#movieOverview {
+    font-size: 26px;
 }
