@@ -14,6 +14,7 @@ class App extends React.Component {
     };
 
     this.populateGenreDropdown = this.populateGenreDropdown.bind(this);
+    this.searchRandomMovie = this.searchRandomMovie.bind(this);
   }
 
   populateGenreDropdown() {
