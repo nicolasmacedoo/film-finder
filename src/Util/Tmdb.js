@@ -1,9 +1,9 @@
-const tmdbKey = 'b6dfabd50a3371b5c40e7cc467496452';
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
+const requestParams = `?api_key=${import.meta.env.VITE_TMDB_KEY}`;
 
+console.log(requestParams)
 const getGenres = async () => {
     const genreRequestEndpoint = '/genre/movie/list';
-    const requestParams = `?api_key=${tmdbKey}`;
     const urlToFetch = `${tmdbBaseUrl}${genreRequestEndpoint}${requestParams}`;
 
     try {
@@ -17,3 +17,5 @@ const getGenres = async () => {
         console.log(error);        
     }
 };
+
+export {getGenres}
