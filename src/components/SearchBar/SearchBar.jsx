@@ -9,13 +9,20 @@ class SearchBar extends React.Component {
             option: ''
         };
 
-        this.handleOptionChange = this.handleOptionChange.bind(this)
+        this.handleOptionChange = this.handleOptionChange.bind(this);
+        this.handleSearch = this.handleSearch.bind(this);
     }
 
     handleOptionChange(event) {
         this.setState({
             option: event.target.value
         });
+    }
+
+    handleSearch(event) {
+        this.props.searchRandomMovie(this.state.option);
+
+        event.preventDefault();
     }
 
     render() {
@@ -32,7 +39,7 @@ class SearchBar extends React.Component {
                 </select>
                 <div>
                     {this.state.option && <p>You selected {this.state.option}</p>}
-                    <button id="playBtn">Let's Play!</button>                   
+                    <button id="playBtn" onClick={this.handleSearch}>Let's Play!</button>                   
                 </div>
             </div>
         )
