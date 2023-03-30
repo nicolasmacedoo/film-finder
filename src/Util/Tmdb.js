@@ -57,4 +57,11 @@ const getMovieInfo = async (movie) => {
     }
 };
 
-export {getGenres}
+const showRandomMovie = async (genre) => {
+    const movies = await getMovies(genre);
+    const randomMovie = await getRandomMovie(movies);
+    const info = await getMovieInfo(randomMovie);
+    return info;
+}
+
+export { getGenres, showRandomMovie };
