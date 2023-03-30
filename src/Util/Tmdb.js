@@ -40,4 +40,21 @@ const getRandomMovie = (movies) => {
     return randomMovie;
 };
 
+const getMovieInfo = async (movie) => {
+    const movieId = movie.id;
+    const movieEndpoint = `/movie/${movieId}`;
+    const urlToFetch = `${tmdbBaseUrl}${movieEndpoint}${requestParams}&language=pt-BR`;
+
+    try {
+        const response = await fetch(urlToFetch);
+        if(response.ok) {
+            const jsonResponse = await response.json();
+            const movieInfo = jsonResponse
+            return movieInfo
+        }
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 export {getGenres}
